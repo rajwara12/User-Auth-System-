@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Forget Password{% endblock title %}
+{% block body %}
+<div class="container">
+    <h2 class="text-center mt-2">
+        Change Password
+    </h2>
+    <div class="container border 18px solid black border-rounded mt-2 col-lg-4">
+    <form   method="post">{% csrf_token %}
+ <div class="form-group">
+   <label for="">Password</label>
+   <input type="password" name="newpass" id="" class="form-control" placeholder="" aria-describedby="helpId">
+
+ </div>
+ <label for="">Confirm Password</label>
+ <input type="password" name="newpass1" id="" class="form-control" placeholder="" aria-describedby="helpId">
+  
+
+<input type="hidden"  name="user_id" value="{{user_id}}" class="form-control" placeholder="" aria-describedby="helpId">
+
+<input type="submit"  class="btn btn-outline-info mt-1 mb-1" value="Submit">
+    </form>
+</div>
+</div>
+ 
+
+
+{% endblock body %}

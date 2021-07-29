@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Forget Password{% endblock title %}
+{% block body %}
+<div class="container  ">
+    <h2 class="text-center mt-2 "> 
+        Forget Password
+    </h2>
+    <div class="container col-lg-4 border 18px black  border-rounded ">
+    <form action="/forget_pass/" method="post">{% csrf_token %}
+ <div class="form-group">
+   <label for="">Username</label>
+   <input type="username" name="username" required   placeholder="Enter your username here.." class="form-control" placeholder="" aria-describedby="helpId">
+    
+ </div>
+<input type="submit" class="btn btn-outline-info mt-1 mb-2" value="Submit">
+    </form>
+</div>
+</div>
+
+
+{% endblock body %}
